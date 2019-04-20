@@ -4,13 +4,12 @@
 #
 Name     : perl-Module-Runtime-Conflicts
 Version  : 0.003
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz
-Summary  : 'Provide information on conflicts for Module::Runtime'
+Summary  : Provide information on conflicts for Module::Runtime
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-Module-Runtime-Conflicts-data = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Dist::CheckConflicts)
 BuildRequires : perl(Module::Runtime)
@@ -19,24 +18,6 @@ BuildRequires : perl(Module::Runtime)
 This archive contains the distribution Module-Runtime-Conflicts,
 version 0.003:
 Provide information on conflicts for Module::Runtime
-
-%package data
-Summary: data components for the perl-Module-Runtime-Conflicts package.
-Group: Data
-
-%description data
-data components for the perl-Module-Runtime-Conflicts package.
-
-
-%package dev
-Summary: dev components for the perl-Module-Runtime-Conflicts package.
-Group: Development
-Requires: perl-Module-Runtime-Conflicts-data = %{version}-%{release}
-Provides: perl-Module-Runtime-Conflicts-devel = %{version}-%{release}
-
-%description dev
-dev components for the perl-Module-Runtime-Conflicts package.
-
 
 %prep
 %setup -q -n Module-Runtime-Conflicts-0.003
@@ -77,12 +58,3 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Runtime/Conflicts.pm
-
-%files data
-%defattr(-,root,root,-)
-/usr/share/package-licenses/perl-Module-Runtime-Conflicts/LICENCE
-
-%files dev
-%defattr(-,root,root,-)
-/usr/share/man/man3/Module::Runtime::Conflicts.3

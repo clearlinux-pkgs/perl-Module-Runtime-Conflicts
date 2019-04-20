@@ -10,6 +10,7 @@ Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Confli
 Summary  : Provide information on conflicts for Module::Runtime
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Module-Runtime-Conflicts-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Dist::CheckConflicts)
 BuildRequires : perl(Module::Runtime)
@@ -18,6 +19,24 @@ BuildRequires : perl(Module::Runtime)
 This archive contains the distribution Module-Runtime-Conflicts,
 version 0.003:
 Provide information on conflicts for Module::Runtime
+
+%package dev
+Summary: dev components for the perl-Module-Runtime-Conflicts package.
+Group: Development
+Provides: perl-Module-Runtime-Conflicts-devel = %{version}-%{release}
+Requires: perl-Module-Runtime-Conflicts = %{version}-%{release}
+
+%description dev
+dev components for the perl-Module-Runtime-Conflicts package.
+
+
+%package license
+Summary: license components for the perl-Module-Runtime-Conflicts package.
+Group: Default
+
+%description license
+license components for the perl-Module-Runtime-Conflicts package.
+
 
 %prep
 %setup -q -n Module-Runtime-Conflicts-0.003
@@ -58,3 +77,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.28.2/Module/Runtime/Conflicts.pm
+
+%files dev
+%defattr(-,root,root,-)
+/usr/share/man/man3/Module::Runtime::Conflicts.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Module-Runtime-Conflicts/LICENCE

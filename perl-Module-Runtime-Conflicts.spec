@@ -4,7 +4,7 @@
 #
 Name     : perl-Module-Runtime-Conflicts
 Version  : 0.003
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz
 Summary  : 'Provide information on conflicts for Module::Runtime'
@@ -99,4 +99,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Runtime/Conflicts.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Runtime/Conflicts.pm

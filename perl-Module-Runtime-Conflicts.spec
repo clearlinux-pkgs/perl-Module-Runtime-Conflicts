@@ -4,7 +4,7 @@
 #
 Name     : perl-Module-Runtime-Conflicts
 Version  : 0.003
-Release  : 22
+Release  : 23
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Runtime-Conflicts-0.003.tar.gz
 Summary  : 'Provide information on conflicts for Module::Runtime'
